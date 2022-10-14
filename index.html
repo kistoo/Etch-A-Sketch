@@ -10,8 +10,13 @@
 <body>
 
     <div id="instructions">
-        <p>Insert the number of squares of the sides. You can choose between 1 and 100 squares</p>
-        <input type="number">
+        <div>
+            <p>Insert the number of squares of the sides. You can choose between 1 and 100 squares</p>
+        </div>
+        <div>
+            <input type="range" value="20" min="1" max="100" oninput="this.nextElementSibling.value=this.value">
+            <output>20</output>
+        </div>
     </div>
 
     <div id="canvas"></div>
