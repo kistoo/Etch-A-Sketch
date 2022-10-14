@@ -1,0 +1,31 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ab93ee;
+}
+
+#instructions {
+    display: flex;
+    flex-flow: row,wrap;
+    width: 800px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas {
+    width: 800px;
+    height: 800px;
+    background-color: black;
+    display: block;
+}
+
+#canvas div {
+    background-color: bisque;
+    flex-wrap: wrap;
+    flex: auto;
+}
