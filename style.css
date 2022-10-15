@@ -21,11 +21,15 @@ body {
     width: 800px;
     height: 800px;
     background-color: black;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    gap: 0px;
 }
 
 #canvas div {
     background-color: bisque;
-    flex-wrap: wrap;
-    flex: auto;
+    width: 0px;
+    height: 0px;
+    margin: 0px;
 }
