@@ -20,7 +20,7 @@ body {
 #canvas {
     width: 800px;
     height: 800px;
-    background-color: black;
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     flex: auto;
@@ -28,6 +28,6 @@ body {
 }
 
 #canvas div {
-    background-color: bisque;
+    background-color: white;
     margin: 0px;
 }
