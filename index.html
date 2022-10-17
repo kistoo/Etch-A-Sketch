@@ -10,8 +10,11 @@
 <body>
 
     <div id="instructions">
-        <div>
-            <p>Insert the number of squares of the sides. You can choose between 1 and 100 squares</p>
+        <div id="buttons">
+            <button id="color">Color<input type="color"></button>
+            <button id="random">Random</button>
+            <button id="eraser">Eraser</button>
+            <button id="clear">Clear</button>
         </div>
         <div>
             <input id="slider" type="range" value="20" min="1" max="100" oninput="this.nextElementSibling.value=this.value">
