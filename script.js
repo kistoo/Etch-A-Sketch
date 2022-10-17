@@ -1,10 +1,15 @@
-const sketchSide = document.querySelector("output");
+//options
 const input = document.getElementById("slider");
+const color = document.getElementById("color");
+const sketchSide = document.querySelector("output");
+const randomColor = document.getElementById("random");
+const eraser = document.getElementById("eraser");
+const clear = document.getElementById("clear");
+//canvas
 const canvas = document.getElementById("canvas");
 let paintStatus = false;
-
-generateSketch();
-input.onchange = () => generateSketch();
+let paintColor = "black";
+let paintMode = "color";
 
 function generateSketch(){
     canvas.textContent="";
@@ -26,7 +31,37 @@ function generateSketch(){
     }
 }
 
+function getMode(mode,e){
+    paintMode=mode;
+    switch(paintMode){
+        case "color":
+            paintColor = e.target.value;
+            break;
+        case "eraser":
+            paintColor = "white";
+            break;
+    }
+}
+
+function getRandomColor(){
+    let r = Math.round(Math.random()*255);
+    let g = Math.round(Math.random()*255);
+    let b = Math.round(Math.random()*255);
+    paintColor = `rgb(${r},${g},${b})`;
+}
+
 function paint(e){
     if (paintStatus===true || e.type==="click"){
-        e.target.style.backgroundColor="black";}
+        if (paintMode==="random"){
+            getRandomColor();
+        }
+        e.target.style.backgroundColor=`${paintColor}`;
+    }
 }
+
+generateSketch();
+input.onchange = () => generateSketch();
+color.onchange = (e) => getMode("color",e);
+randomColor.addEventListener("click", () => getMode("random"));
+eraser.addEventListener("click", () => getMode("eraser"));
+clear.addEventListener("click", () => generateSketch());
