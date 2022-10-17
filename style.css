@@ -1,20 +1,30 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ab93ee;
+    background-color: #3f2a77;
 }
+
+button, output, div {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+button {
+    padding: 5px;
+}
+
 
 #instructions {
     display: flex;
-    flex-flow: row,wrap;
+    flex-direction: row;
     width: 800px;
-    margin: 20px;
+    padding: 20px;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    background-color: rgb(203, 156, 248);
 }
 
 #canvas {
